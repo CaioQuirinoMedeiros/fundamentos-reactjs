@@ -9,7 +9,7 @@ export const Container = styled.div<ContainerProps>`
   padding: 30px 0;
 
   header {
-    width: 1120px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: ${({ size }) => (size === 'small' ? '0 20px ' : '0 20px 150px')};
     display: flex;
@@ -22,6 +22,7 @@ export const Container = styled.div<ContainerProps>`
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        padding-bottom: 6px;
 
         & + a {
           margin-left: 32px;
@@ -29,6 +30,10 @@ export const Container = styled.div<ContainerProps>`
 
         &:hover {
           opacity: 0.6;
+        }
+
+        &.active {
+          border-bottom: 2px solid #ff872c;
         }
       }
     }
